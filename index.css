@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: monospace;
 }
 
 .wrapper{
@@ -12,24 +13,22 @@
     align-items: center;
 }
 #card{
+    border: 3px solid rgb(7, 145, 99);
     position: relative;
     width: 200px;
-    height: 250px;
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
+    padding: 10px 15px 15px 15px;
 }
 #card h1{
     color: black;
     text-align: center;
-    font-size: 15px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.35rem;
     padding: 15px 2px;
 }
-#card div{
-    position: absolute;
-    top: 40%;
-    left: 5%;
-}
+
 #card p{
-    margin: 5px 0;
+    font-weight: bold;
+    margin: 0 0 5px;
+    font-size: 1.2rem;
 }
