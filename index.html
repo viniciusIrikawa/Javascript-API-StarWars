@@ -8,22 +8,62 @@
     <title> StarWars API </title>
 </head>
 <body>
-    <div class="wrapper">
-        <div id="card">
-            <h1> Character Information </h1>
-            <div>
-                <span>Name:</span>
-                <p id="name"> Name </p>
-                <span>Height:</span>
-                <p id="height"> Height </p>
-                <span> Birth year:</span>
-                <p id="birth-year"> Birth year </p>
-                <span>Eye Color:</span>
-                <p id="eye-color"> Eye Color </p>
-            </div>
-        </div>
-    </div>
+    <section id="wrapper"></section>
+    <script>
+        function create(i){
+            const wrapper = document.getElementById("wrapper");
     
+            const card = document.createElement("div");
+            card.setAttribute("class", "card");
+    
+            const title = document.createElement("h1");
+            title.innerHTML = 'Character Information';
+    
+            const div = document.createElement("div");
+            const span1 = document.createElement("span");
+            span1.innerHTML = 'Name:';
+    
+            const p1 = document.createElement("p");
+            p1.setAttribute('id', 'name'+ i)
+            p1.innerHTML = ' Name ';
+    
+            const span2 = document.createElement("span");
+            span2.innerHTML = 'Height:';
+    
+            const p2 = document.createElement("p");
+            p2.setAttribute('id', 'height'+ i)
+            p2.innerHTML = ' Height ';
+    
+            const span3 = document.createElement("span");
+            span3.innerHTML = 'Birth year:';
+    
+            const p3 = document.createElement("p");
+            p3.setAttribute('id', 'birth-year'+ i);
+            p3.innerHTML = ' Birth year '; 
+    
+            const span4 = document.createElement("span");
+            span4.innerHTML = 'Eye Color:';
+    
+            const p4 = document.createElement("p");
+            p4.setAttribute('id', 'eye-color'+ i)
+            p4.innerHTML = ' Eye Color '; 
+    
+            div.appendChild(span1);
+            div.appendChild(p1);
+            div.appendChild(span2);
+            div.appendChild(p2);
+            div.appendChild(span3);
+            div.appendChild(p3);
+            div.appendChild(span4);
+            div.appendChild(p4);
+            card.appendChild(title);
+            card.appendChild(div);
+            wrapper.appendChild(card);
+    
+            document.body.appendChild(wrapper);
+        }
+    </script>
     <script src="script.js"></script>
+</script>
 </body>
 </html>
